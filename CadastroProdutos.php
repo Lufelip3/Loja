@@ -1,10 +1,11 @@
 <?php
 include_once("objetos/ProdutoController.php");
+
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $controller = new ProdutoController();
 
     if(isset($_POST["cadastrar"])){
-        $a = $controller->cadastrarProduto($_POST["produto"]);
+        $a = $controller->CadastrarProduto($_POST["produto"]);
     }
 }
 ?>
