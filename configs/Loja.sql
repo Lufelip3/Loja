@@ -8,6 +8,7 @@ nome varchar(50) not null,
 descricao varchar(255) not null,
 quantidade int not null,
 preco decimal(10,2) not null
+imagem VARCHAR(255);
 );
 
 INSERT INTO produtos (nome, descricao, quantidade, preco) VALUES

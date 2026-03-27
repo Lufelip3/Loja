@@ -56,9 +56,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     <?php if($a):?>
     <?php foreach($a as $produto):?>
         <tr>
-            <td><?= $produto->id_produto; ?></td>
-            <td><?= $produto->nome; ?></td>
-            <td><?= $produto->preco; ?></td>
+            <td><a href="ver-produto.php?id= <?= $produto->id_produto; ?>"><?= $produto->id_produto; ?></a></td>
+            <td><a href="ver-produto.php?id= <?= $produto->id_produto; ?>"><?= $produto->nome; ?></a></td>
+            <td><a href="ver-produto.php?id= <?= $produto->id_produto; ?>"><?= $produto->preco; ?></a></td>
         </tr>
     <?php endforeach;?>
     <?php endif;?>
@@ -76,13 +76,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     <?php if($produtos) : ?>
         <?php foreach($produtos as $produto) : ?>
             <tr>
-                <td><?php echo $produto->id_produto; ?></td>
-                <td><?php echo $produto->nome; ?></td>
-                <td><?php echo $produto->descricao; ?></td>
-                <td><?php echo $produto->quantidade; ?></td>
-                <td><?php echo $produto->preco; ?></td>
+                <td><a href="ver-produto.php?id= <?= $produto->id_produto; ?>"><?= $produto->id_produto; ?></a></td>
+                <td><a href="ver-produto.php?id= <?= $produto->id_produto; ?>"><?= $produto->nome; ?></a></td>
+                <td><a href="ver-produto.php?id= <?= $produto->id_produto; ?>"><?= $produto->descricao; ?></a></td>
+                <td><a href="ver-produto.php?id= <?= $produto->id_produto; ?>"><?= $produto->quantidade; ?></a></td>
+                <td><a href="ver-produto.php?id= <?= $produto->id_produto; ?>"><?= $produto->preco; ?></a></td>
+
                 <td><a href="AtualizarProdutos.php?alterar=<?= $produto->id_produto ?>">Alterar</a></td>
                 <td><a href="index.php?excluir=<?= $produto->id_produto ?>">Excluir</a></td>
+                <td><a href="ver-produto.php?id=<?= $produto->id_produto ?>">Visualizar</a></td>
             </tr>
         <?php endforeach; ?>
     <?php endif;?>
